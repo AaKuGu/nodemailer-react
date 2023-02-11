@@ -5,7 +5,7 @@ import Home from "./components/Home";
 const App = () => {
   return (
     <div
-      className="h-screen w-full text-white font-bold text-5xl"
+      className="h-screen w-full text-white font-bold md:text-5xl text-3xl"
       style={{ background: "url('/bg.png')", backgroundSize: "contain" }}
     >
       <div className="DarkBG absolute w-full h-full  opacity-80 top-0 left-0 bg-black z-10">
