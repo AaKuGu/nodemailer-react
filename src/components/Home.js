@@ -4,7 +4,7 @@ import toast, { Toaster } from "react-hot-toast";
 
 const Home = () => {
   const [email, setEmail] = useState("");
-  const inputRef = useRef();
+  const inputRef = useRef()
 
   const sendEmail = async (e) => {
     e.preventDefault();
