@@ -10,16 +10,13 @@ const Home = () => {
   const sendEmail = async (e) => {
     e.preventDefault();
 
-    const res = await axios.post(
-      "https://nodemailer-server-topaz.vercel.app/api/register",
-      {
-        email,
-      }
+    const res = await axios.get(
+      "https://nodemailer-server-topaz.vercel.app/api/get"
     );
 
     setRess("Hii");
+    console.log("res", res);
     toast("Email sent, Check your inbox ...!");
-
   };
 
   useEffect(() => {
