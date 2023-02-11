@@ -10,9 +10,12 @@ const Home = () => {
   const sendEmail = async (e) => {
     e.preventDefault();
 
-    const res = await axios.post("http://localhost:8000/api/register", {
-      email,
-    });
+    const res = await axios.post(
+      "https://nodemailer-server-topaz.vercel.app/api/register",
+      {
+        email,
+      }
+    );
 
     setRess("Hii");
     toast("Email sent, Check your inbox ...!");
