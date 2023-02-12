@@ -4,19 +4,16 @@ import toast, { Toaster } from "react-hot-toast";
 
 const Home = () => {
   const [email, setEmail] = useState("");
-  const [ress, setRess] = useState();
   const inputRef = useRef();
 
   const sendEmail = async (e) => {
     e.preventDefault();
 
-    const res = await axios.post(
+    await axios.post(
       "https://nodemailer-server-topaz.vercel.app/api/register",
       { email }
     );
 
-    setRess("Hii");
-    console.log("res", res);
     toast("Email sent, Check your inbox ...!");
   };
 
@@ -61,7 +58,6 @@ const Home = () => {
           Receive
         </button>
       </form>
-      <div>{ress}</div>
     </div>
   );
 };
