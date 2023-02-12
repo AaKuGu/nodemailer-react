@@ -5,6 +5,7 @@ import toast, { Toaster } from "react-hot-toast";
 const Home = () => {
   const [email, setEmail] = useState("");
   const inputRef = useRef();
+  const [toast_dir, setToast_dir] = useState("top-center");
 
   const sendEmail = async (e) => {
     e.preventDefault();
@@ -25,7 +26,7 @@ const Home = () => {
       className="text-xl gap-16 flex flex-col px-5 py-5 rounded-lg w-[80%] md:w-[70%] xl:w-[70%] z-20"
       style={{ background: "blue" }}
     >
-      <Toaster position="top-center" reverseOrder="false" />
+      <Toaster position={toast_dir} reverseOrder="false" />
       <div className="text-center md:text-3xl text-2xl font-">
         Receive an email from me
       </div>
@@ -53,7 +54,9 @@ const Home = () => {
           type="submit"
           className="md:px-5 md:py-2 hover:bg-red-900 rounded-lg md:text-2xl text-lg px-3 py-1"
           style={{ background: "purple" }}
-          onClick={() => toast("Sending...")}
+          onClick={() => {
+            toast("Sending..."), setToast_dir("bottom-center");
+          }}
         >
           Receive
         </button>
