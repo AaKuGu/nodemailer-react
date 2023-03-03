@@ -34,10 +34,10 @@ const Home = () => {
         onSubmit={sendEmail}
         className="flex flex-col items-center gap-5 text-white"
       >
-        <div className="flex items-center justify-center  gap-1 md:gap-2 lg:gap-3 flex-col md:flex-row">
+        <div className="flex items-center justify-center  gap-1 md:gap-2 lg:gap-3 flex-col md:flex-row w-[70%] ">
           <label
             htmlFor="email"
-            className="font-mono w-[30%] text-base md:text-2xl text-center "
+            className="font-mono w-[40%] text-base md:text-xl lg:text-2xl text-center"
           >
             Email :{" "}
           </label>
@@ -46,7 +46,7 @@ const Home = () => {
             name="email"
             id="email"
             onChange={(e) => setEmail(e.target.value)}
-            className="px-3 py-1 md:py-2 rounded-lg flex items-center w-full text-black outline-none border-none text-base md:text-lg"
+            className="px-3 py-1 md:py-1.5 lg:py-2 rounded-lg flex items-center w-full text-black outline-none border-none text-base md:text-lg"
             // className="border-none outline-none px-5 font-bold text-base md:text-2xl w-full  rounded-lg bg-white text-black   mb-10 md:mb-0 py-2"
             // style={{ color: "white" }}
             ref={inputRef}
