@@ -2,7 +2,7 @@ import React from "react";
 
 const Header = () => {
   return (
-    <div className="relative z-20 font-poppins text-xl font-bold md:text-5xl text-black">
+    <div className="relative z-20 font-poppins text-xl font-bold md:text-3xl xl:text-5xl text-black">
       Send Email ( NodeMailer )
     </div>
   );

@@ -22,7 +22,7 @@ const Home = () => {
   });
   return (
     <div
-      className="text-xl gap-16 flex flex-col px-5 py-5 rounded-lg w-[80%] md:w-[70%] xl:w-[70%] z-20"
+      className="text-xl gap-16 flex flex-col md:px-5 px-2 py-5 rounded-lg w-[80%] md:w-[70%] xl:w-[70%] z-20"
       style={{ background: "blue" }}
     >
       <Toaster position="top-center" reverseOrder="false" />
@@ -32,10 +32,13 @@ const Home = () => {
       <form
         action=""
         onSubmit={sendEmail}
-        className="flex flex-col items-center gap-5"
+        className="flex flex-col items-center gap-5 text-white"
       >
-        <div className="flex justify-center md:gap-3 gap-5 md:text-3xl text-xl flex-col md:flex-row items-center">
-          <label htmlFor="email" className="font-mono">
+        <div className="flex items-center justify-center  gap-1 md:gap-2 lg:gap-3 flex-col md:flex-row">
+          <label
+            htmlFor="email"
+            className="font-mono w-[30%] text-base md:text-2xl text-center "
+          >
             Email :{" "}
           </label>
           <input
@@ -43,7 +46,8 @@ const Home = () => {
             name="email"
             id="email"
             onChange={(e) => setEmail(e.target.value)}
-            className="border-none outline-none px-5 font-bold text-base md:text-2xl min-w-[200px]  rounded-lg bg-white text-black   mb-10 md:mb-0 py-2"
+            className="px-3 py-1 md:py-2 rounded-lg flex items-center w-full text-black outline-none border-none text-base md:text-lg"
+            // className="border-none outline-none px-5 font-bold text-base md:text-2xl w-full  rounded-lg bg-white text-black   mb-10 md:mb-0 py-2"
             // style={{ color: "white" }}
             ref={inputRef}
           />
